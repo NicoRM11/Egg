@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="extra01.entidades">
+  <ClassDiagramComponents>
+    <Class name="Alquiler" package="extra01.entidades" visibility="public" xPosition="-62.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombreCliente" type="String" visibility="private"/>
+        <Field name="dniCliente" type="Integer" visibility="private"/>
+        <Field name="fechaAlquiler" type="LocalDate" visibility="private"/>
+        <Field name="fechaDevolucion" type="LocalDate" visibility="private"/>
+        <Field name="ocupacionAmarre" type="Barco" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getNombreCliente" returnType="String" visibility="public"/>
+        <Method name="setNombreCliente" returnType="void" visibility="public">
+          <Argument type="String" name="nombreCliente"/>
+        </Method>
+        <Method name="getDniCliente" returnType="Integer" visibility="public"/>
+        <Method name="setDniCliente" returnType="void" visibility="public">
+          <Argument type="Integer" name="dniCliente"/>
+        </Method>
+        <Method name="getFechaAlquiler" returnType="LocalDate" visibility="public"/>
+        <Method name="setFechaAlquiler" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="fechaAlquiler"/>
+        </Method>
+        <Method name="getFechaDevolucion" returnType="LocalDate" visibility="public"/>
+        <Method name="setFechaDevolucion" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="fechaDevolucion"/>
+        </Method>
+        <Method name="getOcupacionAmarre" returnType="Barco" visibility="public"/>
+        <Method name="setOcupacionAmarre" returnType="void" visibility="public">
+          <Argument type="Barco" name="ocupacionAmarre"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Barco" package="extra01.entidades" visibility="public" xPosition="305.0" yPosition="11.0">
+      <Fields>
+        <Field name="matricula" type="String" visibility="protected"/>
+        <Field name="eslora" type="Integer" visibility="protected"/>
+        <Field name="anioFabricacion" type="Integer" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="matricula"/>
+          <Argument type="Integer" name="eslora"/>
+          <Argument type="Integer" name="anioFabricacion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMatricula" returnType="String" visibility="public"/>
+        <Method name="setMatricula" returnType="void" visibility="public">
+          <Argument type="String" name="matricula"/>
+        </Method>
+        <Method name="getEslora" returnType="Integer" visibility="public"/>
+        <Method name="setEslora" returnType="void" visibility="public">
+          <Argument type="Integer" name="eslora"/>
+        </Method>
+        <Method name="getAnioFabricacion" returnType="Integer" visibility="public"/>
+        <Method name="setAnioFabricacion" returnType="void" visibility="public">
+          <Argument type="Integer" name="anioFabricacion"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BarcoAMotor" package="extra01.entidades" visibility="public" isFinal="true" xPosition="717.0" yPosition="219.0">
+      <Fields>
+        <Field name="potenciaCV" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="potenciaCV"/>
+          <Argument type="String" name="matricula"/>
+          <Argument type="Integer" name="eslora"/>
+          <Argument type="Integer" name="anioFabricacion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPotenciaCV" returnType="Integer" visibility="public"/>
+        <Method name="setPotenciaCV" returnType="void" visibility="public">
+          <Argument type="Integer" name="potenciaCV"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Velero" package="extra01.entidades" visibility="public" isFinal="true" xPosition="489.0" yPosition="34.0">
+      <Fields>
+        <Field name="numeroMastiles" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="numeroMastiles"/>
+          <Argument type="String" name="matricula"/>
+          <Argument type="Integer" name="eslora"/>
+          <Argument type="Integer" name="anioFabricacion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNumeroMastiles" returnType="Integer" visibility="public"/>
+        <Method name="setNumeroMastiles" returnType="void" visibility="public">
+          <Argument type="Integer" name="numeroMastiles"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Yate" package="extra01.entidades" visibility="public" isFinal="true" xPosition="519.0" yPosition="111.0">
+      <Fields>
+        <Field name="potenciaCV" type="Integer" visibility="private"/>
+        <Field name="numeroCamarotes" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="potenciaCV"/>
+          <Argument type="Integer" name="numeroCamarotes"/>
+          <Argument type="String" name="matricula"/>
+          <Argument type="Integer" name="eslora"/>
+          <Argument type="Integer" name="anioFabricacion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPotenciaCV" returnType="Integer" visibility="public"/>
+        <Method name="setPotenciaCV" returnType="void" visibility="public">
+          <Argument type="Integer" name="potenciaCV"/>
+        </Method>
+        <Method name="getNumeroCamarotes" returnType="Integer" visibility="public"/>
+        <Method name="setNumeroCamarotes" returnType="void" visibility="public">
+          <Argument type="Integer" name="numeroCamarotes"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="extra01.entidades.BarcoAMotor" target="extra01.entidades.Barco"/>
+    <IsRelation name="is" source="extra01.entidades.Velero" target="extra01.entidades.Barco"/>
+    <HasRelation name="ocupacionAmarre" source="extra01.entidades.Alquiler" target="extra01.entidades.Barco" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="extra01.entidades.Alquiler" target="extra01.entidades.Barco" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="extra01.entidades.Yate" target="extra01.entidades.Barco"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

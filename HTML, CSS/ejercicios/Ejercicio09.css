@@ -1,0 +1,74 @@
+*{
+    background-color: rgb(212, 212, 212);
+}
+
+h1{
+   color:rgb(27, 185, 190);
+}
+
+strong{
+   color:red;
+}
+
+.destacado{
+   color: yellow;
+
+}
+
+#subtitulo{
+   color: blue;
+}
+
+a{
+    color: red;
+}
+
+em{
+    color: blue;
+}
+
+.especial{
+    color:blueviolet;
+}
+
+.normal {
+    width: 400px;
+    border: 1px solid #000;
+    border-collapse: collapse;
+   }
+
+.normal thead , .normal tfoot , .normal tbody , .normal tr, .normal th, .normal td {
+    border: 1px solid #000;
+}
+
+.normal .especial{
+    color: gold;
+}
+
+.normal th{
+    color: red;
+}
+
+.normal strong{
+    color: gold;
+}
+
+.normal td {
+    color:green;
+}
+
+.normal em{
+    color:green;
+}
+
+#adicional{
+    color: goldenrod;
+}
+
+#especial{
+    color: palevioletred;
+}
+
+#adicional a{
+    color: green;
+}

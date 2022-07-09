@@ -1,7 +1,7 @@
 # Curso Egg
               
-                                   ¡¡¡Buenas!!!
-                            --------------------------
+                                          ¡¡¡Buenas!!!
+                                  ---------------------------
 En este repositorio se encuentran los ejercicios desarrollados durante el curso de Egg, 
 comenzando en principio con logica de programacion utilizando pseudocodigo PseInt. Luego ejercicios 
 de Java, con programacion orientada a objetos, ejercicios de relaciones entre clases, colecciones, herencia, 
